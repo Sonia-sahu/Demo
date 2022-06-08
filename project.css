@@ -16,11 +16,24 @@
   height: auto;
   background: linear-gradient(
     to bottom,
-    rgba(37, 45, 55, 0.6) rgba(37, 45, 55, 0.6)
+    rgba(37, 45, 55, 0.6),
+    rgba(37, 45, 55, 0.4)
   );
   border-radius: 25px;
   padding: 20px 25px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box.star {
+  background-color: var(--color-dark-blue);
+  padding: 10px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+.title {
+  color: var(--color-white);
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 30px;
 }
 
 body {
@@ -39,14 +52,27 @@ button {
   height: 50px;
   border-radius: 50%;
   border: none;
+  position: absolute;
   outline: none;
-  background-color: Light Grey hsl(217, 12%, 63%);
-  color: White hsl(0, 0%, 100%);
-  font-weight: bolder;
+  background-color: var(--color-dark-blue);
+  transition: background-color 0.2s;
+}
+button::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-medium-grey);
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 .message {
-  background-color: #1a2639;
-}
-.title {
-  background-color: #1a2639;
+  color: var(--color-medium-grey);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 150px;
 }
